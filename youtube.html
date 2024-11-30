@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Video của anhhhh</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/spinload.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <style>
+        .video-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="bg"></div>
+        <div class="content">
+            <header>
+                <h2 id="youtube-title"></h2>
+                <h4 id="youtube-desc"></h4>
+            </header>
+            <div class="video-container">
+                <iframe id="youtube-frame" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="btn-container">
+                <button id="btn-back" class="btn btn-danger btn-lg"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./config.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#youtube-title').text(CONFIG.youtubeTitle);
+            $('#youtube-desc').text(CONFIG.youtubeDesc);
+            $('#btn-back').text(CONFIG.btnBack);
+            $('#youtube-frame').attr('src', `https://www.youtube.com/embed/${CONFIG.youtubeId}`);
+            
+            $('#btn-back').click(function() {
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

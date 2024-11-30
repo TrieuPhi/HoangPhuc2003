@@ -98,6 +98,7 @@ function textGenerate() {
 $('#yes').click(function() {
     var audio = new Audio('sound/tick.mp3');
     audio.play();
+
     Swal.fire({
         title: CONFIG.question,
         html: true,
@@ -116,16 +117,37 @@ $('#yes').click(function() {
         confirmButtonText: CONFIG.btnReply
     }).then((result) => {
         if (result.value) {
+            // Swal.fire({
+            //     width: 900,
+            //     confirmButtonText: CONFIG.btnAccept,
+            //     background: '#fff url("img/iput-bg.jpg")',
+            //     title: CONFIG.mess,
+            //     text: CONFIG.messDesc,
+            //     confirmButtonColor: '#83d0c9',
+            //     onClose: () => {
+            //         window.location = CONFIG.messLink;
+            //       }
+            // })
+            
+
+            // Trong phần xử lý sự kiện click nút yes, thay đổi phần Swal.fire cuối cùng
             Swal.fire({
                 width: 900,
                 confirmButtonText: CONFIG.btnAccept,
                 background: '#fff url("img/iput-bg.jpg")',
                 title: CONFIG.mess,
                 text: CONFIG.messDesc,
+                showCancelButton: true,
                 confirmButtonColor: '#83d0c9',
-                onClose: () => {
+                cancelButtonColor: '#fe8a71',
+                confirmButtonText: CONFIG.btnAccept,
+                cancelButtonText: CONFIG.btnWatch,
+            }).then((result) => {
+                if (result.value) {
                     window.location = CONFIG.messLink;
-                  }
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    window.location = 'youtube.html';
+                }
             })
         }
     })
