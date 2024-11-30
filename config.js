@@ -1,7 +1,7 @@
 const CONFIG = {
     // Thêm cấu hình cho YouTube
     introTitle: '',
-    introDesc: `Mình nhớ cậu, mình có thể gặp lại cậu chứ?`,
+    introDesc: `Có món quà này mình muốn gửi cho bạn, bạn xem nhé!!`,
     btnIntro: 'Chấp Nhận!!!',
     title: 'Phải chăng em đã yêu ngay từ cái nhìn đầu tiên 😙',
     desc: 'Phải chăng em đã say ngay từ lúc thấy nụ cười ấy ',

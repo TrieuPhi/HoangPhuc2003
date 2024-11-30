@@ -89,3 +89,31 @@ header h4 {
 .swal2-backdrop-show{
   background-size: 200px 100px !important;
 }
+
+/* Tùy chỉnh style cho popup */
+.custom-title {
+  color: #ff4d4d !important;  /* Màu đỏ tươi */
+  font-size: 2em !important;
+  font-weight: bold !important;
+}
+
+.swal2-html-container {
+  color: #333333cc !important;  /* Màu xám đậm */
+  font-size: 1.2em !important;
+  font-weight: 500 !important;
+}
+
+.white-text {
+  color: #ffffff !important;
+  font-size: 1.2em !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0); /* Thêm bóng đổ để chữ dễ đọc hơn */
+}
+
+.intro-text {
+  color: #ffffff !important;
+  font-size: 1.3em !important;
+  font-weight: 500 !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+  margin: 15px 0 !important;
+  line-height: 1.5 !important;
+}
